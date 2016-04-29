@@ -1,0 +1,37 @@
+//
+//  PrefixHeader.pch
+//  phoneBook
+//
+//  Created by apple on 16/4/26.
+//  Copyright © 2016年 itheima. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+
+#import "MBProgressHUD.h"
+
+
+
+#define HMRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
+
+
+#ifdef DEBUG
+
+#define HMLog(...) NSLog(__VA_ARGS__) // 替换系统的打印
+
+#else
+
+#define HMLog(...)        // 如果是发布版本,保证不报错
+
+#endif
+
+#endif
+
+
+
+
+
+#endif /* PrefixHeader_pch */
